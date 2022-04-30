@@ -13,7 +13,7 @@ using namespace std;
 // doesn't work, put the line to the top or do
 #pragma warning(disable:4996)
 
- // Ввод изображения в таблицу
+ // Г‚ГўГ®Г¤ ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГї Гў ГІГ ГЎГ«ГЁГ¶Гі
 
 void insertImage(sqlite3* db, string fileName, string driverServiceNumber)
 {
@@ -105,7 +105,7 @@ void insertImage(sqlite3* db, string fileName, string driverServiceNumber)
 }
 
 
-// Ввод данных в таблицу
+// Г‚ГўГ®Г¤ Г¤Г Г­Г­Г»Гµ Гў ГІГ ГЎГ«ГЁГ¶Гі
 void insert(sqlite3* db, string table, string insertStr, string photoFileName, string driverServiceNumber)
 {
     if (insertStr == "")
@@ -130,7 +130,7 @@ void insert(sqlite3* db, string table, string insertStr, string photoFileName, s
     }
 }
 
-// Удаление данных из таблицы
+// Г“Г¤Г Г«ГҐГ­ГЁГҐ Г¤Г Г­Г­Г»Гµ ГЁГ§ ГІГ ГЎГ«ГЁГ¶Г»
 void deleteRecord(sqlite3* db, string table, string column, string deleteValue)
 {
     if (deleteValue == "")
@@ -150,7 +150,7 @@ void deleteRecord(sqlite3* db, string table, string column, string deleteValue)
     }
 }
 
-// Обновление данных в таблице
+// ГЋГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Г¤Г Г­Г­Г»Гµ Гў ГІГ ГЎГ«ГЁГ¶ГҐ
 void update(sqlite3* db, string table, string column, string value, string columnToChange, string newValue)
 {
     if (newValue == "")
@@ -171,7 +171,7 @@ void update(sqlite3* db, string table, string column, string value, string colum
 }
 
 
-// Вывести данные
+// Г‚Г»ГўГҐГ±ГІГЁ Г¤Г Г­Г­Г»ГҐ
 void Sel(sqlite3_stmt* res, int columnNumber)
 {
     while (true)
@@ -192,7 +192,7 @@ void Sel(sqlite3_stmt* res, int columnNumber)
     }
 }
 
-// Вывод всех записей таблицы
+// Г‚Г»ГўГ®Г¤ ГўГ±ГҐГµ Г§Г ГЇГЁГ±ГҐГ© ГІГ ГЎГ«ГЁГ¶Г»
 void AllRecords(sqlite3* db, string table, int num)
 {
     if (table == "")
@@ -214,7 +214,7 @@ void AllRecords(sqlite3* db, string table, int num)
     sqlite3_finalize(res);
 }
 
-// Вывести данные по водителю
+// Г‚Г»ГўГҐГ±ГІГЁ Г¤Г Г­Г­Г»ГҐ ГЇГ® ГўГ®Г¤ГЁГІГҐГ«Гѕ
 void getOrdersByDriver(sqlite3* db, string driverServiceNumber, string period)
 {
     sqlite3_stmt* res;
@@ -240,7 +240,7 @@ void getOrdersByDriver(sqlite3* db, string driverServiceNumber, string period)
     sqlite3_finalize(res);
 }
 
-//ВЫвести пробег машины
+//Г‚Г›ГўГҐГ±ГІГЁ ГЇГ°Г®ГЎГҐГЈ Г¬Г ГёГЁГ­Г»
 void getMileageByCar(sqlite3* db, string carNumber)
 {
     sqlite3_stmt* res;
@@ -293,7 +293,7 @@ void getMileageByCar(sqlite3* db, string carNumber)
 
 
 
-// Вывести вес груза по водителю
+// Г‚Г»ГўГҐГ±ГІГЁ ГўГҐГ± ГЈГ°ГіГ§Г  ГЇГ® ГўГ®Г¤ГЁГІГҐГ«Гѕ
 void getTransportedWeightByDriver(sqlite3* db, string driverServiceNumber)
 {
     sqlite3_stmt* res;
@@ -321,7 +321,7 @@ void getTransportedWeightByDriver(sqlite3* db, string driverServiceNumber)
     sqlite3_finalize(res);
 }
 
-// Сумма по водителю
+// Г‘ГіГ¬Г¬Г  ГЇГ® ГўГ®Г¤ГЁГІГҐГ«Гѕ
 void getEarningsByDriver(sqlite3* db, string driverServiceNumber)
 {
     sqlite3_stmt* res;
@@ -349,7 +349,7 @@ void getEarningsByDriver(sqlite3* db, string driverServiceNumber)
     sqlite3_finalize(res);
 }
 
-// Информация о водители с наименьшим колвом поездок
+// Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї Г® ГўГ®Г¤ГЁГІГҐГ«ГЁ Г± Г­Г ГЁГ¬ГҐГ­ГјГёГЁГ¬ ГЄГ®Г«ГўГ®Г¬ ГЇГ®ГҐГ§Г¤Г®ГЄ
 void getDriverWithMinTripsNumInfo(sqlite3* db)
 {
     sqlite3_stmt* res;
@@ -408,7 +408,7 @@ void getDriverWithMinTripsNumInfo(sqlite3* db)
     sqlite3_finalize(res);
 }
 
-// Информация о машине с наибольшим пробегом
+// Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї Г® Г¬Г ГёГЁГ­ГҐ Г± Г­Г ГЁГЎГ®Г«ГјГёГЁГ¬ ГЇГ°Г®ГЎГҐГЈГ®Г¬
 void getCarWithMaxMileage(sqlite3 * db)
 {
     sqlite3_stmt* res;
@@ -503,7 +503,7 @@ bool checkCargoWeight(sqlite3* db, string carNumber, string cargoWeight)
     }
 }
 
-// Вывести сумму по водителю за период
+// Г‚Г»ГўГҐГ±ГІГЁ Г±ГіГ¬Г¬Гі ГЇГ® ГўГ®Г¤ГЁГІГҐГ«Гѕ Г§Г  ГЇГҐГ°ГЁГ®Г¤
 void getEarningsByDriverByPeriod(sqlite3* db, string driverServiceNumber, string startDate, string endDate, ostream& out)
 {
     sqlite3_stmt* res;
@@ -532,7 +532,7 @@ void getEarningsByDriverByPeriod(sqlite3* db, string driverServiceNumber, string
     sqlite3_finalize(res);
 }
 
-// вывести сумму по всем водителям за период
+// ГўГ»ГўГҐГ±ГІГЁ Г±ГіГ¬Г¬Гі ГЇГ® ГўГ±ГҐГ¬ ГўГ®Г¤ГЁГІГҐГ«ГїГ¬ Г§Г  ГЇГҐГ°ГЁГ®Г¤
 void getEarningsAllDriversByPeriod(sqlite3* db, string startDate, string endDate)
 {
 
@@ -598,7 +598,7 @@ void getEarningsAllDriversByPeriod(sqlite3* db, string startDate, string endDate
 
 
 
-// Вывести вес груза по машине
+// Г‚Г»ГўГҐГ±ГІГЁ ГўГҐГ± ГЈГ°ГіГ§Г  ГЇГ® Г¬Г ГёГЁГ­ГҐ
 
 void getTransportedWeightByCar(sqlite3* db, string carNumber)
 {
@@ -627,8 +627,8 @@ void getTransportedWeightByCar(sqlite3* db, string carNumber)
     sqlite3_finalize(res);
 }
 
-//по каждому водителю – общее количество поездок, 
-//общую массу перевезенных грузов, сумму заработанных денег
+//ГЇГ® ГЄГ Г¦Г¤Г®Г¬Гі ГўГ®Г¤ГЁГІГҐГ«Гѕ В– Г®ГЎГ№ГҐГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЇГ®ГҐГ§Г¤Г®ГЄ, 
+//Г®ГЎГ№ГіГѕ Г¬Г Г±Г±Гі ГЇГҐГ°ГҐГўГҐГ§ГҐГ­Г­Г»Гµ ГЈГ°ГіГ§Г®Гў, Г±ГіГ¬Г¬Гі Г§Г Г°Г ГЎГ®ГІГ Г­Г­Г»Гµ Г¤ГҐГ­ГҐГЈ
 void getNumOfTripsTransportedWeightEarningsOfAllDrivers(sqlite3* db)
 {
     sqlite3_stmt* res;
@@ -656,7 +656,7 @@ void getNumOfTripsTransportedWeightEarningsOfAllDrivers(sqlite3* db)
     sqlite3_finalize(res);
 }
 
-// Вывести количество поездок по водителю
+// Г‚Г»ГўГҐГ±ГІГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЇГ®ГҐГ§Г¤Г®ГЄ ГЇГ® ГўГ®Г¤ГЁГІГҐГ«Гѕ
 void getNumOfTripsByDriver(sqlite3* db, string driverServiceNumber)
 {
     sqlite3_stmt* res;
