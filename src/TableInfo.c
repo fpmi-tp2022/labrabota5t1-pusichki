@@ -57,7 +57,7 @@ string getIndertData(string& table, string& photoFileName, string& driverService
         cout << "Enter image file photo" << endl;
         cin >> photoFileName;
 
-        data = "'" + driverServiceNumber + "', '" + lastName + "', '" + category + "', '" + workExperience + "', '" + address + "', '" + birthYear + "', '" + carNumber + "', 'Íåò ôîòî'";
+        data = "'" + driverServiceNumber + "', '" + lastName + "', '" + category + "', '" + workExperience + "', '" + address + "', '" + birthYear + "', '" + carNumber + "', 'ÃÃ¥Ã² Ã´Ã®Ã²Ã®'";
         
     }
     else if (o == 3)
@@ -207,7 +207,7 @@ string getUpdateValue(string& table, string& column, string& value, string& colu
         cin >> value;
         cout << "Enter name of column" << endl;
         cin >> columnToChange;
-        cout << "Ââåäèòå íîâîå çíà÷åíèå" << endl;
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã®Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥" << endl;
         cin >> data;
         
     }
@@ -237,7 +237,7 @@ string getUpdateValue(string& table, string& column, string& value, string& colu
     }
     else
     {
-        cout << "Âûáðàííîé îïöèè íå ñóùåñòâóåò" << endl;
+        cout << "Ã‚Ã»Ã¡Ã°Ã Ã­Ã­Ã®Ã© Ã®Ã¯Ã¶Ã¨Ã¨ Ã­Ã¥ Ã±Ã³Ã¹Ã¥Ã±Ã²Ã¢Ã³Ã¥Ã²" << endl;
         
     }
     
@@ -308,7 +308,7 @@ string getDriverServiceNumber()
 void printDriverMenu()
 {
     cout << "Menu:\n";
-    cout << "1: Show orders in periodä\n";
+    cout << "1: Show orders in periodÃ¤\n";
     cout << "2: Show number of travels\n";
     cout << "3: Check weight of all orders\n";
     cout << "4: Show sum for all time\n";
