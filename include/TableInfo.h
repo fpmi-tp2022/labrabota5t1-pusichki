@@ -1,30 +1,27 @@
-// autoparkUI.h
-// lab5
-
 #pragma once
 #include <string>
 using namespace std;
 
-// Вставка
+// Г‚Г±ГІГ ГўГЄГ 
 string getIndertData(string& table, string& photoFileName, string& driverServiceNumber);
 
-// Удаление из таблицы
+// Г“Г¤Г Г«ГҐГ­ГЁГҐ ГЁГ§ ГІГ ГЎГ«ГЁГ¶Г»
 string getDeleteData(string& table, string& column);
 
 
 string getUpdateValue(string& table, string& column, string& value, string& columnToChange);
 
-// Вернуть данные по всем таблицам
+// Г‚ГҐГ°Г­ГіГІГј Г¤Г Г­Г­Г»ГҐ ГЇГ® ГўГ±ГҐГ¬ ГІГ ГЎГ«ГЁГ¶Г Г¬
 string getSelectData(int& columnNumber, string& columnNames);
 
-// Вернуть номер водителя
+// Г‚ГҐГ°Г­ГіГІГј Г­Г®Г¬ГҐГ° ГўГ®Г¤ГЁГІГҐГ«Гї
 string getDriverServiceNumber();
 
-// Вернуть номер
+// Г‚ГҐГ°Г­ГіГІГј Г­Г®Г¬ГҐГ°
 string getCarNumber();
 
-// Вернуть промежуток времени
+// Г‚ГҐГ°Г­ГіГІГј ГЇГ°Г®Г¬ГҐГ¦ГіГІГ®ГЄ ГўГ°ГҐГ¬ГҐГ­ГЁ
 string getPeriodData();
 
-// Меню для админа
+// ГЊГҐГ­Гѕ Г¤Г«Гї Г Г¤Г¬ГЁГ­Г 
 void Menu();
