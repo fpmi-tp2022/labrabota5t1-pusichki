@@ -2,11 +2,11 @@
 // lab5
 
 #include <iostream>
-#include "sqlite3.h"
+#include "sqlite3.cpp"
 #include <string>
-#include "autoparkDB.h"
+#include "DatabaseInfo.h"
 #include "TableInfo.h"
-#pragma comment(lib, "sqlite3.h")
+#pragma comment(lib, "sqlite3.cpp")
 using namespace std;
 
 
@@ -15,6 +15,7 @@ int main()
 {
 
 
+    /*
     sqlite3* db;
 
 
@@ -143,5 +144,5 @@ int main()
     }
 
     sqlite3_close(db);
-    return 0;
+    return 0;*/
 }

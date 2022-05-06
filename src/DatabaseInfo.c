@@ -2,9 +2,9 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include "sqlite3.h"
+#include "sqlite3.cpp"
 #include <string>
-#include "autoparkDB.h"
+#include "DatabaseInfo.h"
 
 
 using namespace std;
@@ -14,6 +14,7 @@ using namespace std;
 #pragma warning(disable:4996)
 
  // ¬вод изображени€ в таблицу
+void deleteRecord(sqlite3* db, string table, string column, string deleteValue);
 
 void insertImage(sqlite3* db, string fileName, string driverServiceNumber)
 {
