@@ -2,7 +2,7 @@
 // lab5
 
 #include <iostream>
-#include "sqlite3.h"
+#include <sqlite3.h>
 #include <string>
 #include "DatabaseInfo.h"
 #include "TableInfo.h"
