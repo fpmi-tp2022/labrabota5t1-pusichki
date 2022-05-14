@@ -1,12 +1,12 @@
-﻿// main.cpp
+// main.cpp
 // lab5
 
 #include <iostream>
-#include "sqlite3.h"
+#include <sqlite3.h>
 #include <string>
-#include "autoparkDB.h"
+#include "DatabaseInfo.h"
 #include "TableInfo.h"
-#pragma comment(lib, "sqlite3.h")
+
 using namespace std;
 
 

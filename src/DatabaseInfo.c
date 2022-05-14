@@ -2,9 +2,14 @@
 //#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include "sqlite3.h"
+#include <sqlite3.h>
+<<<<<<< HEAD:src/DatabaseInfo.c
 //#include <string>
 #include "autoparkDB.h"
+=======
+#include <string>
+#include "DatabaseInfo.h"
+>>>>>>> 9d29aafa7224e4f8c9fc965197b19487acca2f00:src/DatabaseInfo.cpp
 
 
 using namespace std;
