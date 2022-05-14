@@ -1,51 +1,51 @@
 
 #pragma once
 #include <string>
-#include "sqlite3.h"
+#include <sqlite3.h>
 using namespace std;
 
 
-void insertImage(sqlite3* , string , string ); // Ввод изображения в таблицу
+void insertImage(sqlite3* , string , string ); // Г‚ГўГ®Г¤ ГЁГ§Г®ГЎГ°Г Г¦ГҐГ­ГЁГї Гў ГІГ ГЎГ«ГЁГ¶Гі
 
 
-void insert(sqlite3* , string , string , string , string ); // Ввод данных в таблицу
+void insert(sqlite3* , string , string , string , string ); // Г‚ГўГ®Г¤ Г¤Г Г­Г­Г»Гµ Гў ГІГ ГЎГ«ГЁГ¶Гі
 
-void deleteRecord(sqlite3* , string , string , string ); // Удаление данных из таблицы
-
-
+void deleteRecord(sqlite3* , string , string , string ); // Г“Г¤Г Г«ГҐГ­ГЁГҐ Г¤Г Г­Г­Г»Гµ ГЁГ§ ГІГ ГЎГ«ГЁГ¶Г»
 
 
-void getNumOfTripsByDriver(sqlite3* , string ); // Вывести количество поездок по водителю
 
 
-void getTransportedWeightByDriver(sqlite3* , string ); // Вывести вес груза по водителю
+void getNumOfTripsByDriver(sqlite3* , string ); // Г‚Г»ГўГҐГ±ГІГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЇГ®ГҐГ§Г¤Г®ГЄ ГЇГ® ГўГ®Г¤ГЁГІГҐГ«Гѕ
 
 
-void getEarningsByDriver(sqlite3* db, string driverServiceNumber); // Сумма по водителю
+void getTransportedWeightByDriver(sqlite3* , string ); // Г‚Г»ГўГҐГ±ГІГЁ ГўГҐГ± ГЈГ°ГіГ§Г  ГЇГ® ГўГ®Г¤ГЁГІГҐГ«Гѕ
 
 
-void getDriverWithMinTripsNumInfo(sqlite3* db); // Информация о водители с наименьшим колвом поездок
+void getEarningsByDriver(sqlite3* db, string driverServiceNumber); // Г‘ГіГ¬Г¬Г  ГЇГ® ГўГ®Г¤ГЁГІГҐГ«Гѕ
 
 
-void getCarWithMaxMileage(sqlite3* db); // Информация о машине с наибольшим пробегом
-
-void update(sqlite3*, string, string, string, string, string); // Обновление данных в таблице
+void getDriverWithMinTripsNumInfo(sqlite3* db); // Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї Г® ГўГ®Г¤ГЁГІГҐГ«ГЁ Г± Г­Г ГЁГ¬ГҐГ­ГјГёГЁГ¬ ГЄГ®Г«ГўГ®Г¬ ГЇГ®ГҐГ§Г¤Г®ГЄ
 
 
-void Sel(sqlite3_stmt*, int); // Вывести данные
+void getCarWithMaxMileage(sqlite3* db); // Г€Г­ГґГ®Г°Г¬Г Г¶ГЁГї Г® Г¬Г ГёГЁГ­ГҐ Г± Г­Г ГЁГЎГ®Г«ГјГёГЁГ¬ ГЇГ°Г®ГЎГҐГЈГ®Г¬
+
+void update(sqlite3*, string, string, string, string, string); // ГЋГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Г¤Г Г­Г­Г»Гµ Гў ГІГ ГЎГ«ГЁГ¶ГҐ
 
 
-void AllRecords(sqlite3*, string, int); // Вывод всех записей таблицы
+void Sel(sqlite3_stmt*, int); // Г‚Г»ГўГҐГ±ГІГЁ Г¤Г Г­Г­Г»ГҐ
 
 
-void getOrdersByDriver(sqlite3*, string, string); // Вывести данные по водителю
+void AllRecords(sqlite3*, string, int); // Г‚Г»ГўГ®Г¤ ГўГ±ГҐГµ Г§Г ГЇГЁГ±ГҐГ© ГІГ ГЎГ«ГЁГ¶Г»
 
 
-void getMileageByCar(sqlite3*, string); //ВЫвести пробег машины
+void getOrdersByDriver(sqlite3*, string, string); // Г‚Г»ГўГҐГ±ГІГЁ Г¤Г Г­Г­Г»ГҐ ГЇГ® ГўГ®Г¤ГЁГІГҐГ«Гѕ
 
 
-void getTransportedWeightByCar(sqlite3*, string); // Вывести общий вес перевозимых машиной грузов
+void getMileageByCar(sqlite3*, string); //Г‚Г›ГўГҐГ±ГІГЁ ГЇГ°Г®ГЎГҐГЈ Г¬Г ГёГЁГ­Г»
 
-//по каждому водителю – общее количество поездок, 
-//общую массу перевезенных грузов, сумму заработанных денег
+
+void getTransportedWeightByCar(sqlite3*, string); // Г‚Г»ГўГҐГ±ГІГЁ Г®ГЎГ№ГЁГ© ГўГҐГ± ГЇГҐГ°ГҐГўГ®Г§ГЁГ¬Г»Гµ Г¬Г ГёГЁГ­Г®Г© ГЈГ°ГіГ§Г®Гў
+
+//ГЇГ® ГЄГ Г¦Г¤Г®Г¬Гі ГўГ®Г¤ГЁГІГҐГ«Гѕ вЂ“ Г®ГЎГ№ГҐГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЇГ®ГҐГ§Г¤Г®ГЄ, 
+//Г®ГЎГ№ГіГѕ Г¬Г Г±Г±Гі ГЇГҐГ°ГҐГўГҐГ§ГҐГ­Г­Г»Гµ ГЈГ°ГіГ§Г®Гў, Г±ГіГ¬Г¬Гі Г§Г Г°Г ГЎГ®ГІГ Г­Г­Г»Гµ Г¤ГҐГ­ГҐГЈ
 void getNumOfTripsTransportedWeightEarningsOfAllDrivers(sqlite3*);
